@@ -32,11 +32,10 @@
 
 		&-two {
 			visibility: collapse;
-		}
-
-		@include media-size($custom-600) {
-			&-two {
+			display: none;
+			@include media-size($custom-600) {
 				visibility: visible;
+				@include flex;
 			}
 		}
 	}

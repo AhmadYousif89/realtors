@@ -2,9 +2,9 @@
 
 .features {
 	background-color: #fff;
-	margin-block: 12rem;
+	margin-block: 10rem;
 	margin-inline: auto;
-	width: 90%;
+	width: 80%;
 	display: grid;
 
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -14,7 +14,7 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-column: col-start 1 / col-end 8;
 		gap: 8rem 4rem;
-		margin-block: 20rem;
+		margin-block: 15rem;
 	}
 }
 
