@@ -343,12 +343,12 @@ select {
 }
 .header__btn {
   box-shadow: 0 3px 5px hsla(0deg, 0%, 0%, 0.5);
+  margin-bottom: 5rem;
 }
 .header__sponsor {
   display: flex;
   flex-direction: column;
   opacity: 0.35;
-  margin: 5rem 0;
 }
 .header__sponsor-text {
   position: relative;
@@ -378,6 +378,7 @@ select {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 .header__sponsor .sponsor__item {
   display: flex;
