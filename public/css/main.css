@@ -303,6 +303,9 @@ select {
   .header {
     height: 95vh;
   }
+  .header .logo {
+    margin: 5rem 0;
+  }
 }
 @media only screen and (min-width: 64.0625em) {
   .header {
@@ -315,9 +318,6 @@ select {
   justify-self: center;
   margin: 0 2rem;
   text-transform: uppercase;
-}
-.header__content .logo {
-  margin: 0;
 }
 .header__content p {
   font-size: 1.5rem;
@@ -343,7 +343,7 @@ select {
   display: flex;
   flex-direction: column;
   opacity: 0.35;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 .header__sponsor-text {
   position: relative;

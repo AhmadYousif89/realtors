@@ -19,23 +19,21 @@
 
 	@include media-size($tablet-port) {
 		height: 95vh;
+		.logo {
+			margin: 5rem 0;
+		}
 	}
 
 	@include media-size($tablet-land) {
 		grid-column: full-start / col-end 5;
 	}
 
-	//////////////////////
 	&__content {
 		display: grid;
 		align-self: center;
 		justify-self: center;
 		margin: 0 2rem;
 		text-transform: uppercase;
-
-		.logo {
-			margin: 0;
-		}
 
 		p {
 			font-size: 1.5rem;
@@ -66,7 +64,7 @@
 	&__sponsor {
 		@include flex($direction: column);
 		opacity: 0.35;
-		margin-bottom: 5rem;
+		margin: 5rem 0;
 
 		&-text {
 			position: relative;
