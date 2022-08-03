@@ -194,7 +194,7 @@ select {
 }
 .navigation__overlay {
   position: fixed;
-  top: 6%;
+  top: 5rem;
   opacity: 0;
   visibility: hidden;
   width: 100vw;
@@ -203,7 +203,7 @@ select {
 }
 .navigation__bg {
   position: fixed;
-  top: 6%;
+  top: 5.1rem;
   right: 0;
   transform: translateX(100%);
   width: 25rem;
