@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.logo {
+	margin-top: 10rem;
+	@include flex($alignItems: center);
+	justify-self: center;
+
+	@include media-size($tablet-port) {
+		margin-top: 0;
+	}
+
+	&-img {
+		width: 4rem;
+	}
+
+	&-text {
+		font-size: 2rem;
+		padding: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: $primary-l;
+	}
+}

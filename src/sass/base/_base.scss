@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-cairo;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: $grey-l;
+	letter-spacing: 1px;
+}

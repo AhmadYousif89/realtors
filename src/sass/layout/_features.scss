@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.features {
+	background-color: #fff;
+	margin-block: 12rem;
+	margin-inline: auto;
+	width: 90%;
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 4rem;
+
+	@include media-size($tablet-land) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-column: col-start 1 / col-end 8;
+		gap: 8rem 4rem;
+		margin-block: 20rem;
+	}
+}
+
+.feature {
+	display: grid;
+	grid-template-columns: 6rem 1fr;
+	justify-items: center;
+	gap: 2rem;
+
+	&__icon {
+		width: 5rem;
+		height: 5rem;
+		fill: $primary;
+	}
+
+	&__info {
+		letter-spacing: 1px;
+
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 1.5rem;
+			color: $brown-d;
+		}
+	}
+}

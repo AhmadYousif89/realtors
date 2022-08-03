@@ -1,0 +1,22 @@
+/* COLOR */
+$primary: hsl(35, 40%, 50%);
+$primary-l: hsl(35, 40%, 60%); //hsl(45, 35%, 55%)
+
+$secondary: hsl(215, 50%, 10%);
+$secondary-l: hsl(215, 50%, 14%);
+
+$grey: hsl(0, 0%, 80%);
+$grey-l: hsl(20, 20%, 95%);
+
+$brown: hsl(35, 20%, 40%);
+$brown-d: hsl(35, 20%, 25%);
+
+/* FONTS */
+$font-cairo: 'Cairo', sans-serif;
+$font-josefin: 'Josefin Sans', sans-serif;
+
+$fs-link: 1.5rem;
+
+/* BOX-SHADOWS */
+$shadow-l: 0 3px 5px hsl(0 0% 0% / 0.15);
+$shadow-d: 0 3px 5px hsl(0 0% 0% / 0.5);

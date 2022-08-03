@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+
+.stories {
+	background-color: $grey-l;
+	position: relative;
+	isolation: isolate;
+	display: grid;
+	box-shadow: 0 0.5rem 2rem rgba(#000, 0.15);
+
+	@include media-size($tablet-land) {
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		grid-column: full-start / full-end;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url('../../assets/cube\ pattern.png');
+		background-size: contain;
+		opacity: 0.05;
+		z-index: -1;
+	}
+
+	&__content {
+		padding: 8rem 0;
+		display: grid;
+		justify-items: center;
+
+		@include media-size($tablet-land) {
+			padding: 0rem 8rem;
+			flex: 1;
+		}
+
+		.story {
+			display: grid;
+			justify-items: center;
+			max-width: 85%;
+
+			&__quote {
+				display: grid;
+				gap: 1rem;
+
+				h3 {
+					text-transform: uppercase;
+					color: $primary;
+					font-size: 1.5rem;
+				}
+
+				h2 {
+					font-size: 2.5rem;
+					line-height: 1.2;
+
+					span {
+						text-transform: capitalize;
+						color: $primary;
+					}
+				}
+
+				p {
+					font-size: 1.25rem;
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		.quote-btn {
+			font-size: 1.125rem;
+			justify-self: start;
+		}
+	}
+
+	&__images {
+		display: grid;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: repeat(6, 1fr);
+
+		background-image: url('../../assets/stories/story-4.jpg');
+		background-size: cover;
+
+		@include media-size($tablet-land) {
+			order: -1;
+		}
+
+		img {
+			display: block;
+			height: 100%;
+			box-shadow: 0 0 4rem rgba(#000, 0.2);
+		}
+
+		&-img--1 {
+			grid-row: 2 / 6;
+			grid-column: 2 / 6;
+			box-shadow: $shadow-l;
+		}
+		&-img--2 {
+			z-index: 2;
+			grid-row: 4 / -1;
+			grid-column: 4 / -1;
+			width: 120%;
+			box-shadow: $shadow-l;
+		}
+	}
+}

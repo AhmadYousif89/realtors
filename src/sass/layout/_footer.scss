@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.footer {
+	display: grid;
+	gap: 2rem;
+	background-color: $secondary;
+	padding: 8rem 0;
+	color: $grey-l;
+
+	@include media-size($tablet-land) {
+		padding: 6rem;
+		grid-column: full-start / full-end;
+	}
+
+	.logo {
+		margin-top: 0;
+	}
+
+	.nav {
+		margin: 4rem;
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+			justify-items: center;
+			gap: 4rem;
+
+			@include media-size($tablet-port) {
+				grid-template-columns: repeat(2, 30rem);
+				justify-content: center;
+			}
+		}
+
+		&__item {
+			@include flex($alignItems: center, $justifyContent: center);
+			width: fit-content;
+			flex-grow: 1;
+		}
+
+		&__link {
+			width: fit-content;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			font-family: $font-josefin;
+			color: $grey-l;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	.social {
+		text-align: center;
+		margin-top: 2rem;
+
+		&__icon {
+			width: 6rem;
+			height: 6rem;
+			padding: 1.25rem;
+			border: 2px solid $grey-l;
+			border-radius: 50%;
+			fill: currentColor;
+			margin: 1rem;
+			transition: border 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $primary;
+			}
+		}
+	}
+
+	&__legal {
+		color: $grey-l;
+		text-align: center;
+		letter-spacing: 1px;
+		margin-top: 2rem;
+		font-size: 1.25rem;
+		font-family: $font-josefin;
+
+		span {
+			color: $primary;
+		}
+	}
+}

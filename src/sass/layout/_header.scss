@@ -1,0 +1,109 @@
+@use '../abstracts' as *;
+
+.header {
+	height: 100vh;
+	background-color: $brown;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($secondary, 1),
+			rgba($secondary-l, 0.9)
+		),
+		url('../assets/hero.jpg');
+	background-size: cover;
+	background-position: center;
+
+	display: grid;
+	grid-template-rows:
+		minmax(min-content, 15rem) minmax(min-content, 1fr)
+		minmax(min-content, 10rem);
+
+	@include media-size($tablet-port) {
+		height: 95vh;
+	}
+
+	@include media-size($tablet-land) {
+		grid-column: full-start / col-end 5;
+	}
+
+	//////////////////////
+	&__content {
+		display: grid;
+		align-self: center;
+		justify-self: center;
+		margin: 0 2rem;
+		text-transform: uppercase;
+
+		.logo {
+			margin: 0;
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: $primary;
+			margin-bottom: 1rem;
+		}
+
+		h1 {
+			max-width: 25ch;
+			font-size: 3rem;
+			line-height: 1.2;
+			color: $grey-l;
+			margin-bottom: 2rem;
+			font-family: $font-josefin;
+
+			span {
+				font-size: 3.5rem;
+				color: $primary;
+			}
+		}
+	}
+
+	&__btn {
+		box-shadow: $shadow-d;
+	}
+
+	///////////////////
+	&__sponsor {
+		@include flex($direction: column);
+		opacity: 0.35;
+		margin-bottom: 5rem;
+
+		&-text {
+			position: relative;
+			align-self: center;
+			color: $grey;
+			text-transform: capitalize;
+			margin-bottom: 2rem;
+			font-size: 1.25rem;
+			letter-spacing: 1px;
+
+			&::before,
+			&::after {
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 1px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $grey;
+			}
+
+			&::before {
+				left: -115%;
+			}
+			&::after {
+				right: -115%;
+			}
+		}
+
+		.sponsor__list {
+			@include flex($justifyContent: center, $gap: 1.5rem);
+		}
+		.sponsor__item {
+			@include flex($alignItems: center);
+			&-img {
+				width: 6rem;
+			}
+		}
+	}
+}

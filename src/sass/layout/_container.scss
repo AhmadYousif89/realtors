@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.container {
+	min-height: 100vh;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: minmax(min-content, 6rem);
+
+	@include media-size($tablet-land) {
+		grid-template-columns:
+			[full-start] 1fr repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
+			1fr [full-end];
+	}
+}
